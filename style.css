@@ -1,0 +1,46 @@
+body {
+    background: rgba(0,0,0,0.9);
+    margin: 0;
+    overflow: hidden;
+}
+.form {
+    background: rgb(0,0,0);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0 0 5px 10px rgba(0,0,255,0.5);
+    font-family: mono;
+    color: aliceblue;
+    padding: 10px;
+    font-size: 30px;
+    z-index:999;
+}
+.form:hover {
+    box-shadow: 0 0 10px 15px rgba(0,0,255,0.5);
+}
+.inp {
+    padding: 10px;
+    font-size: 20px;
+}
+#particleContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+.particle {
+    position: absolute;
+    width: 3px;
+    height:3px;
+    border-radius: 50%;
+    animation: moveParticle linear infinite;
+}
+
+@keyframes moveParticle {
+    to {
+        transform: translate(calc(100vw - 80px), calc(10px - 100vh));
+    }
+}
